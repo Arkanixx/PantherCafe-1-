@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('cafe_background.jpg'); /* Path to your image */
+    background-size: cover; /* Ensure the image covers the whole page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Fix the background image */
+}
+
+h1, h2 {
+    color: #000000;
+    background-color: rgba(130, 232, 71, 0.8); /* Optional: Add a background to headings to improve readability */
+    padding: 10px; /* Optional: Add padding */
+}
+
+form {
+    margin-bottom: 20px;
+    background-color: rgba(94, 170, 98, 0.8); /* Optional: Add a background to forms to improve readability */
+    padding: 20px; /* Optional: Add padding */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+input, select {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #a2f1b6;
+    color: #075716;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.section, .nav-section {
+    display: none;
+}
+
+#nav {
+    margin-bottom: 20px;
+}
+
+#nav button, #category-selection button {
+    margin-right: 10px;
+    background-color: rgb(162, 241, 182); /* Optional: Add a background to buttons to improve readability */
+}
+
+
+.get-section {
+    background-color: rgba(173, 216, 230, 0.8); /* Light blue background for GET sections */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+

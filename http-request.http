@@ -1,0 +1,19 @@
+###
+# @no-redirect
+POST http://localhost:8080/api/registration
+Content-Type: application/json
+
+{
+  "firstName": "ASDQWE",
+  "lastName": "ASDASD",
+  "email": "QWE@GMAIL.COM",
+  "password": "123123"
+}
+
+<> 2024-07-14T054651.200.html
+<> 2024-07-14T050358.200.html
+<> 2024-07-14T050343.200.html
+<> 2024-07-14T050331.200.html
+<> 2024-07-14T050208.200.html
+
+###

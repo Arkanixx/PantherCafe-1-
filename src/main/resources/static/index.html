@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panther Cafe Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Panther Cafe Management</h1>
+
+<div id="category-selection">
+    <button onclick="showCategory('employees')">Manage Employees</button>
+    <button onclick="showCategory('menu')">Manage Menu</button>
+    <button onclick="showCategory('orders')">Manage Orders</button>
+</div>
+
+<div id="nav-employees" class="nav-section">
+    <br><br>
+    <button onclick="showSection('list', 'employees')">List Employees</button>
+    <button onclick="showSection('form', 'employees')">Add Employee</button>
+    <button onclick="showSection('update', 'employees')">Update Employee</button>
+    <button onclick="showSection('delete', 'employees')">Delete Employee</button>
+</div>
+
+
+<div id="nav-menu" class="nav-section">
+    <br><br>
+    <button onclick="showSection('list', 'menu')">List Items</button>
+    <button onclick="showSection('form', 'menu')">Add Item</button>
+    <button onclick="showSection('update', 'menu')">Update Item</button>
+    <button onclick="showSection('delete', 'menu')">Delete Item</button>
+</div>
+
+<div id="nav-orders" class="nav-section">
+    <br><br>
+    <button onclick="showSection('list', 'orders')">List Orders</button>
+    <button onclick="showSection('form', 'orders')">Add Order</button>
+    <button onclick="showSection('delete', 'orders')">Delete Order</button>
+</div>
+
+<div id="employees-list" class="section get-section">
+    <h2>Employees</h2>
+    <ul id="employees"></ul>
+</div>
+
+<div id="employees-form" class="section">
+    <h2>Add Employee</h2>
+    <form id="add-employee-form">
+        <label for="empFName">First Name:</label>
+        <input type="text" id="empFName" name="empFName" required><br><br>
+        <label for="empLName">Last Name:</label>
+        <input type="text" id="empLName" name="empLName" required><br><br>
+        <label for="empEmail">Email:</label>
+        <input type="email" id="empEmail" name="empEmail" required><br><br>
+        <label for="empPassword">Password:</label>
+        <input type="password" id="empPassword" name="empPassword" required><br><br>
+        <label for="empRole">Role:</label>
+        <select id="empRole" name="empRole" required>
+            <option value="BARISTA">BARISTA</option>
+            <option value="Owner">Owner</option>
+        </select><br><br>
+        <button type="submit">Add Employee</button>
+    </form>
+</div>
+
+<div id="employees-update" class="section">
+    <h2>Update Employee</h2>
+    <form id="update-employee-form">
+        <label for="update-empId">Employee ID:</label>
+        <input type="number" id="update-empId" name="update-empId" required><br><br>
+        <label for="update-empFName">First Name:</label>
+        <input type="text" id="update-empFName" name="update-empFName"><br><br>
+        <label for="update-empLName">Last Name:</label>
+        <input type="text" id="update-empLName" name="update-empLName"><br><br>
+        <label for="update-empEmail">Email:</label>
+        <input type="email" id="update-empEmail" name="update-empEmail"><br><br>
+        <button type="submit">Update Employee</button>
+    </form>
+</div>
+
+<div id="employees-delete" class="section">
+    <h2>Delete Employee</h2>
+    <form id="delete-employee-form">
+        <label for="delete-empId">Employee ID:</label>
+        <input type="number" id="delete-empId" name="delete-empId" required><br><br>
+        <button type="submit">Delete Employee</button>
+    </form>
+</div>
+
+<div id="menu-list" class="section get-section">
+    <h2>Menu Items</h2>
+    <ul id="menu"></ul>
+</div>
+
+<div id="menu-form" class="section">
+    <h2>Add Item</h2>
+    <form id="add-menu-form">
+        <label for="itemName">Item Name:</label>
+        <input type="text" id="itemName" name="itemName" required><br><br>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="0.01" required><br><br>
+        <button type="submit">Add Item</button>
+    </form>
+</div>
+
+<div id="menu-update" class="section">
+    <h2>Update Item</h2>
+    <form id="update-menu-form">
+        <label for="update-itemName">Item Name:</label>
+        <input type="text" id="update-itemName" name="update-itemName" required><br><br>
+        <label for="update-price">Price:</label>
+        <input type="number" id="update-price" name="update-price" step="0.01"><br><br>
+        <button type="submit">Update Item</button>
+    </form>
+</div>
+
+<div id="menu-delete" class="section">
+    <h2>Delete Item</h2>
+    <form id="delete-menu-form">
+        <label for="delete-itemName">Item Name:</label>
+        <input type="text" id="delete-itemName" name="delete-itemName" required><br><br>
+        <button type="submit">Delete Item</button>
+    </form>
+</div>
+
+<div id="orders-list" class="section get-section">
+    <h2>Orders</h2>
+    <ul id="orders"></ul>
+</div>
+
+<div id="orders-form" class="section">
+    <h2>Add Order</h2>
+    <form id="add-order-form">
+        <label for="order-item">Item Name:</label>
+        <select id="order-item" name="order-item" required></select><br><br>
+        <label for="order-quantity">Quantity:</label>
+        <input type="number" id="order-quantity" name="order-quantity" required><br><br>
+        <button type="submit">Add Order</button>
+    </form>
+</div>
+
+<div id="orders-delete" class="section">
+    <h2>Delete Order</h2>
+    <form id="delete-order-form">
+        <label for="delete-orderId">Order ID:</label>
+        <input type="number" id="delete-orderId" name="delete-orderId" required><br><br>
+        <button type="submit">Delete Order</button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
